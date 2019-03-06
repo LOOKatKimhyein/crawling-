@@ -1,17 +1,17 @@
 '''
 https://yoonpunk.tistory.com/6
 
-**조선일보, 카테고리,페이지수입력후 기사 full내용 크롤링하는 함수**
-*remain : html.parser 대신 lxml
-********real final 2019-03-06*********
-[catogory]
-1경제             7전국
-2정치             8스포츠
-3사회             9연예
-4국제
-5문화
-6 오피니언
-'''
+#**조선일보, 카테고리,페이지수입력후 기사 full내용 크롤링하는 함수**
+#remain : html.parser 대신 lxml
+#********real final 2019-03-06*********
+#[catogory]
+#1경제             7전국
+#2정치             8스포츠
+#3사회             9연예
+#4국제
+#5문화
+#6 오피니언
+#'''
 import sys
 from bs4 import BeautifulSoup
 import urllib.request
@@ -28,9 +28,9 @@ def get_text(URL, output_file):
     # 기사의 본문내용을 추출
     for item in content_of_article:
         string_item = str(item.find_all(text=True))
-        output_file.write(string_item)                          #
+        output_file.write(string_item)                          
 
-##########################################################################################3
+
 def crawlling(page,category):
     page = int(page)
     
